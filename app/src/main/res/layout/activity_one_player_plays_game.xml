@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.android.tic_tac_toe.OnePlayerPlaysGame">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:src="@drawable/tictactoesubtitle" />
+
+    <TextView
+        android:id="@+id/player"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:text="@string/default_player_turn_text"
+        android:textSize="22sp"
+        android:textColor="#ffff"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/res"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector1"
+            android:contextClickable="true"
+            android:cursorVisible="true"
+            android:ellipsize="marquee"
+            android:onClick="newGame"
+            android:text="@string/restart_game_button_text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/restartmatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector1"
+            android:contextClickable="true"
+            android:cursorVisible="true"
+            android:ellipsize="marquee"
+            android:onClick="newMatch"
+            android:text="@string/restart_match_button_text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/a11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:textSize="70sp"
+            android:onClick="playmove"
+            android:background="#ffbd4a"
+            android:layout_margin="4dp" />
+
+        <Button
+            android:id="@+id/a12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="70sp"
+            android:onClick="playmove"
+            android:background="#ffbd4a"
+            android:layout_margin="4dp"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/a13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="70sp"
+            android:onClick="playmove"
+            android:background="#ffbd4a"
+            android:layout_margin="4dp"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/a21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="70sp"
+            android:onClick="playmove"
+            android:background="#ffbd4a"
+            android:layout_margin="4dp"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/a22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="70sp"
+            android:onClick="playmove"
+            android:background="#ffbd4a"
+            android:layout_margin="4dp"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/a23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="70sp"
+            android:onClick="playmove"
+            android:background="#ffbd4a"
+            android:layout_margin="4dp"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/a31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textAlignment="center"
+            android:onClick="playmove"
+            android:textSize="70sp"
+            android:background="#ffbd4a"
+            android:layout_margin="4dp"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/a32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="70sp"
+            android:textAlignment="center"
+            android:onClick="playmove"
+            android:background="#ffbd4a"
+            android:layout_margin="4dp"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/a33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="70sp"
+            android:onClick="playmove"
+            android:background="#ffbd4a"
+            android:layout_margin="4dp"
+            android:textColor="#ffffff"/>
+
+    </GridLayout>
+
+</LinearLayout>
+
+
